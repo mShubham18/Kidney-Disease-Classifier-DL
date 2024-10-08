@@ -242,3 +242,43 @@ x=========x]
 [2024-10-08 20:03:45,680: INFO: main >>>>> Stage Evaluation stage completed <<<<<
 
 x=========x]
+[2024-10-08 22:45:47,368: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage started <<<<<]
+[2024-10-08 22:45:47,369: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-08 22:45:47,372: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-08 22:45:47,373: INFO: common created directory at: artifacts]
+[2024-10-08 22:45:47,374: INFO: common created directory at: artifacts/data_ingestion]
+[2024-10-08 22:45:47,374: INFO: data_ingestion Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-08 22:46:04,880: INFO: data_ingestion Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-08 22:46:05,385: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage completed <<<<<
+
+x=========x]
+[2024-10-08 22:47:44,882: INFO: stage_02_prepare_base_model >>>>> Stage Prepare base model started <<<<<]
+[2024-10-08 22:47:44,884: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-08 22:47:44,886: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-08 22:47:44,886: INFO: common created directory at: artifacts]
+[2024-10-08 22:47:44,886: INFO: common created directory at: artifacts\prepare_base_model]
+[2024-10-08 22:47:45,409: WARNING: saving_api You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-10-08 22:47:45,552: WARNING: saving_api You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-10-08 22:47:45,674: INFO: stage_02_prepare_base_model >>>>> Stage Prepare base model completed <<<<<
+
+x=========x]
+[2024-10-08 22:47:51,043: INFO: stage_03_model_training >>>>> Stage Training started <<<<<]
+[2024-10-08 22:47:51,044: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-08 22:47:51,044: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-08 22:47:51,044: INFO: common created directory at: artifacts]
+[2024-10-08 22:47:51,044: INFO: common created directory at: artifacts\training]
+[2024-10-08 22:47:51,356: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-08 22:48:59,621: WARNING: saving_api You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-10-08 22:48:59,780: INFO: stage_03_model_training >>>>> Stage Training completed <<<<<
+
+x=========x]
+[2024-10-08 22:50:46,524: INFO: stage_04_model_evaluation >>>>> Stage Evaluation stage started <<<<<]
+[2024-10-08 22:50:46,524: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-08 22:50:46,524: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-08 22:50:46,524: INFO: common created directory at: artifacts]
+[2024-10-08 22:50:46,760: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-08 22:50:56,718: INFO: common json file saved at: scores.json]
+[2024-10-08 22:50:56,723: INFO: common json file saved at: scores.json]
+[2024-10-08 22:51:09,005: INFO: stage_04_model_evaluation >>>>> Stage Evaluation stage completed <<<<<
+
+x=========x]
