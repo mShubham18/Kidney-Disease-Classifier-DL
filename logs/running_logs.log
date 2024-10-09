@@ -282,3 +282,305 @@ x=========x]
 [2024-10-08 22:51:09,005: INFO: stage_04_model_evaluation >>>>> Stage Evaluation stage completed <<<<<
 
 x=========x]
+[2024-10-09 18:22:15,218: INFO: _internal [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.104:8080]
+[2024-10-09 18:22:15,219: INFO: _internal [33mPress CTRL+C to quit[0m]
+[2024-10-09 18:22:44,322: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:22:44] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:23:18,008: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 18:23:18,103: ERROR: app Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Victus\Documents\PROJECTS\DL Project\venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Documents\PROJECTS\DL Project\venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Documents\PROJECTS\DL Project\venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Documents\PROJECTS\DL Project\venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Documents\PROJECTS\DL Project\venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Documents\PROJECTS\DL Project\venv\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Documents\PROJECTS\DL Project\app.py", line 37, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Documents\PROJECTS\DL Project\src\cnnClassifier\pipeline\prediction.py", line 18, in predict
+    result = np.argmx(model.predict(test_image), axis=1)
+             ^^^^^^^^
+  File "C:\Users\Victus\Documents\PROJECTS\DL Project\venv\Lib\site-packages\numpy\__init__.py", line 347, in __getattr__
+    raise AttributeError("module {!r} has no attribute "
+AttributeError: module 'numpy' has no attribute 'argmx'. Did you mean: 'argmax'?
+[2024-10-09 18:23:18,156: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:23:18] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-09 18:24:25,135: INFO: _internal [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.104:8080]
+[2024-10-09 18:24:25,135: INFO: _internal [33mPress CTRL+C to quit[0m]
+[2024-10-09 18:24:25,138: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:24:29,780: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:24:29,784: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:24:30,014: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:24:30] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:24:30,020: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:24:30] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:24:30,020: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:24:30] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:24:30,021: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:24:30] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:24:30,023: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:24:30] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:24:30,024: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:24:30] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:24:41,350: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 18:24:42,016: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:24:42] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 18:24:58,105: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 18:24:58,527: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:24:58] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 18:25:00,376: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 18:25:00,727: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:25:00] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 18:25:06,931: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 18:25:07,356: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:25:07] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 18:29:23,922: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:29:23] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:29:26,399: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 18:29:26,665: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:29:26] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-09 18:29:30,212: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:29:30] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:29:52,028: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 18:29:52,457: WARNING: polymorphic_function 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000022ED5A41620> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-10-09 18:29:52,462: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:29:52] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 18:31:29,549: INFO: _internal  * Detected change in 'C:\\Users\\Victus\\Documents\\PROJECTS\\DL Project\\src\\cnnClassifier\\pipeline\\prediction.py', reloading]
+[2024-10-09 18:31:31,549: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:32:18,841: INFO: _internal [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.104:8080]
+[2024-10-09 18:32:18,841: INFO: _internal [33mPress CTRL+C to quit[0m]
+[2024-10-09 18:32:18,844: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:32:22,822: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:32:22,822: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:32:29,504: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:32:29] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:32:30,578: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:32:30] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:32:36,392: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 18:32:36,992: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:32:36] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 18:33:23,792: INFO: _internal  * Detected change in 'C:\\Users\\Victus\\Documents\\PROJECTS\\DL Project\\src\\cnnClassifier\\pipeline\\prediction.py', reloading]
+[2024-10-09 18:33:24,619: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:33:29,871: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:33:29,876: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:34:18,151: INFO: _internal [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.104:8080]
+[2024-10-09 18:34:18,152: INFO: _internal [33mPress CTRL+C to quit[0m]
+[2024-10-09 18:34:18,153: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:34:22,091: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:34:22,096: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:34:40,924: INFO: _internal 192.168.1.104 - - [09/Oct/2024 18:34:40] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:34:56,666: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 18:34:57,276: INFO: _internal 192.168.1.104 - - [09/Oct/2024 18:34:57] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 18:37:31,612: INFO: _internal  * Detected change in 'C:\\Users\\Victus\\Documents\\PROJECTS\\DL Project\\src\\cnnClassifier\\pipeline\\prediction.py', reloading]
+[2024-10-09 18:37:32,494: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:37:37,996: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:37:37,999: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:37:55,245: INFO: _internal [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.104:8080]
+[2024-10-09 18:37:55,246: INFO: _internal [33mPress CTRL+C to quit[0m]
+[2024-10-09 18:37:55,247: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:37:59,200: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:37:59,204: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:38:02,393: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:38:02] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:38:04,050: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:38:04] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:38:04,224: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:38:04] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:38:04,385: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:38:04] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:38:04,535: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:38:04] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:38:04,682: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:38:04] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:38:08,256: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:38:08] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-09 18:38:30,189: INFO: _internal  * Detected change in 'C:\\Users\\Victus\\Documents\\PROJECTS\\DL Project\\src\\cnnClassifier\\pipeline\\prediction.py', reloading]
+[2024-10-09 18:38:30,984: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:38:36,588: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:38:36,590: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:39:50,052: INFO: _internal  * Detected change in 'C:\\Users\\Victus\\Documents\\PROJECTS\\DL Project\\src\\cnnClassifier\\pipeline\\prediction.py', reloading]
+[2024-10-09 18:39:50,841: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:39:55,539: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:39:55,544: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:39:58,275: INFO: _internal  * Detected change in 'C:\\Users\\Victus\\Documents\\PROJECTS\\DL Project\\src\\cnnClassifier\\pipeline\\prediction.py', reloading]
+[2024-10-09 18:39:58,955: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:40:14,213: INFO: _internal [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.104:8080]
+[2024-10-09 18:40:14,213: INFO: _internal [33mPress CTRL+C to quit[0m]
+[2024-10-09 18:40:14,219: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:40:17,998: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:40:17,998: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:40:20,996: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:40:20] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:40:21,434: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:40:21] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:40:21,604: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:40:21] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:40:21,772: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:40:21] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:40:21,899: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:40:21] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:40:27,060: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 18:40:27,637: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:40:27] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 18:48:03,385: INFO: _internal  * Detected change in 'C:\\Users\\Victus\\Documents\\PROJECTS\\DL Project\\src\\cnnClassifier\\pipeline\\prediction.py', reloading]
+[2024-10-09 18:48:04,286: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:48:09,515: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:48:09,518: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:48:19,389: INFO: _internal  * Detected change in 'C:\\Users\\Victus\\Documents\\PROJECTS\\DL Project\\src\\cnnClassifier\\pipeline\\prediction.py', reloading]
+[2024-10-09 18:48:20,051: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:48:24,668: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:48:24,670: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:48:29,272: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:48:29] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:48:34,481: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 18:48:35,132: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:48:35] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-09 18:48:51,380: INFO: _internal  * Detected change in 'C:\\Users\\Victus\\Documents\\PROJECTS\\DL Project\\src\\cnnClassifier\\pipeline\\prediction.py', reloading]
+[2024-10-09 18:48:52,146: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:48:56,905: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:48:56,913: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:48:59,530: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:48:59] "GET / HTTP/1.1" 200 -]
+[2024-10-09 18:49:03,979: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 18:49:04,662: INFO: _internal 127.0.0.1 - - [09/Oct/2024 18:49:04] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 18:58:03,745: INFO: _internal [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.104:8080]
+[2024-10-09 18:58:03,746: INFO: _internal [33mPress CTRL+C to quit[0m]
+[2024-10-09 18:58:03,749: INFO: _internal  * Restarting with stat]
+[2024-10-09 18:58:07,793: WARNING: _internal  * Debugger is active!]
+[2024-10-09 18:58:07,815: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 18:58:36,763: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage started <<<<<]
+[2024-10-09 18:58:36,763: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-09 18:58:36,772: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-09 18:58:36,772: INFO: common created directory at: artifacts]
+[2024-10-09 18:58:36,775: INFO: common created directory at: artifacts/data_ingestion]
+[2024-10-09 18:58:36,775: INFO: data_ingestion Downloading data from https://drive.google.com/file/d/1p19Eb5pHDxVMMtTmD92h7PAV-32gIumH/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 18:59:04,861: INFO: data_ingestion Downloaded data from https://drive.google.com/file/d/1p19Eb5pHDxVMMtTmD92h7PAV-32gIumH/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 18:59:14,561: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage completed <<<<<
+
+x=========x]
+[2024-10-09 19:00:27,684: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage started <<<<<]
+[2024-10-09 19:00:27,684: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-09 19:00:27,692: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-09 19:00:27,692: INFO: common created directory at: artifacts]
+[2024-10-09 19:00:27,694: INFO: common created directory at: artifacts/data_ingestion]
+[2024-10-09 19:00:27,695: INFO: data_ingestion Downloading data from https://drive.google.com/file/d/1p19Eb5pHDxVMMtTmD92h7PAV-32gIumH/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:00:58,413: INFO: data_ingestion Downloaded data from https://drive.google.com/file/d/1p19Eb5pHDxVMMtTmD92h7PAV-32gIumH/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:01:07,783: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage completed <<<<<
+
+x=========x]
+[2024-10-09 19:01:54,626: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage started <<<<<]
+[2024-10-09 19:01:54,626: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-09 19:01:54,626: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-09 19:01:54,626: INFO: common created directory at: artifacts]
+[2024-10-09 19:01:54,626: INFO: common created directory at: artifacts/data_ingestion]
+[2024-10-09 19:01:54,626: INFO: data_ingestion Downloading data from https://drive.google.com/file/d/1p19Eb5pHDxVMMtTmD92h7PAV-32gIumH/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:02:27,533: INFO: data_ingestion Downloaded data from https://drive.google.com/file/d/1p19Eb5pHDxVMMtTmD92h7PAV-32gIumH/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:02:36,717: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage completed <<<<<
+
+x=========x]
+[2024-10-09 19:04:07,125: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage started <<<<<]
+[2024-10-09 19:04:07,129: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-09 19:04:07,129: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-09 19:04:07,129: INFO: common created directory at: artifacts]
+[2024-10-09 19:04:07,134: INFO: common created directory at: artifacts/data_ingestion]
+[2024-10-09 19:04:07,134: INFO: data_ingestion Downloading data from https://drive.google.com/file/d/1p19Eb5pHDxVMMtTmD92h7PAV-32gIumH/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:04:35,266: INFO: data_ingestion Downloaded data from https://drive.google.com/file/d/1p19Eb5pHDxVMMtTmD92h7PAV-32gIumH/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:04:44,951: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage completed <<<<<
+
+x=========x]
+[2024-10-09 19:09:31,937: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage started <<<<<]
+[2024-10-09 19:09:31,941: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-09 19:09:31,943: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-09 19:09:31,944: INFO: common created directory at: artifacts]
+[2024-10-09 19:09:31,944: INFO: common created directory at: artifacts/data_ingestion]
+[2024-10-09 19:09:31,944: INFO: data_ingestion Downloading data from https://drive.google.com/file/d/1UZiavGxwUInp_wvw065Ooch323H0PsGP/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:09:59,234: INFO: data_ingestion Downloaded data from https://drive.google.com/file/d/1UZiavGxwUInp_wvw065Ooch323H0PsGP/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:10:08,358: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage completed <<<<<
+
+x=========x]
+[2024-10-09 19:10:37,852: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage started <<<<<]
+[2024-10-09 19:10:37,852: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-09 19:10:37,852: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-09 19:10:37,852: INFO: common created directory at: artifacts]
+[2024-10-09 19:10:37,852: INFO: common created directory at: artifacts/data_ingestion]
+[2024-10-09 19:10:37,852: INFO: data_ingestion Downloading data from https://drive.google.com/file/d/1UZiavGxwUInp_wvw065Ooch323H0PsGP/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:11:06,063: INFO: data_ingestion Downloaded data from https://drive.google.com/file/d/1UZiavGxwUInp_wvw065Ooch323H0PsGP/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:11:15,240: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage completed <<<<<
+
+x=========x]
+[2024-10-09 19:16:35,509: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage started <<<<<]
+[2024-10-09 19:16:35,509: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-09 19:16:35,517: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-09 19:16:35,518: INFO: common created directory at: artifacts]
+[2024-10-09 19:16:35,518: INFO: common created directory at: artifacts/data_ingestion]
+[2024-10-09 19:16:35,519: INFO: data_ingestion Downloading data from https://drive.google.com/file/d/1-QGShCSgRDoY9tL5LR8SODTsIEstwvgo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:17:08,822: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage started <<<<<]
+[2024-10-09 19:17:08,822: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-09 19:17:08,822: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-09 19:17:08,822: INFO: common created directory at: artifacts]
+[2024-10-09 19:17:08,822: INFO: common created directory at: artifacts/data_ingestion]
+[2024-10-09 19:17:08,822: INFO: data_ingestion Downloading data from https://drive.google.com/file/d/1-QGShCSgRDoY9tL5LR8SODTsIEstwvgo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:17:39,236: INFO: data_ingestion Downloaded data from https://drive.google.com/file/d/1-QGShCSgRDoY9tL5LR8SODTsIEstwvgo/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-09 19:17:48,382: INFO: stage_01_data_ingestion >>>>> Stage Data Ingestion Stage completed <<<<<
+
+x=========x]
+[2024-10-09 19:18:41,649: INFO: stage_02_prepare_base_model >>>>> Stage Prepare base model started <<<<<]
+[2024-10-09 19:18:41,664: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-09 19:18:41,664: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-09 19:18:41,664: INFO: common created directory at: artifacts]
+[2024-10-09 19:18:41,664: INFO: common created directory at: artifacts\prepare_base_model]
+[2024-10-09 19:18:42,223: WARNING: saving_api You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-10-09 19:18:42,372: WARNING: saving_api You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-10-09 19:18:42,507: INFO: stage_02_prepare_base_model >>>>> Stage Prepare base model completed <<<<<
+
+x=========x]
+[2024-10-09 19:18:49,677: INFO: stage_03_model_training >>>>> Stage Training started <<<<<]
+[2024-10-09 19:18:49,677: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-09 19:18:49,677: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-09 19:18:49,677: INFO: common created directory at: artifacts]
+[2024-10-09 19:18:49,677: INFO: common created directory at: artifacts\training]
+[2024-10-09 19:18:49,995: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 19:37:20,559: WARNING: saving_api You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-10-09 19:37:20,932: INFO: stage_03_model_training >>>>> Stage Training completed <<<<<
+
+x=========x]
+[2024-10-09 19:37:38,761: INFO: stage_04_model_evaluation >>>>> Stage Evaluation stage started <<<<<]
+[2024-10-09 19:37:38,768: INFO: common yaml file: config\config.yaml loaded successfully]
+[2024-10-09 19:37:38,768: INFO: common yaml file: params.yaml loaded successfully]
+[2024-10-09 19:37:38,768: INFO: common created directory at: artifacts]
+[2024-10-09 19:37:39,071: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 19:40:28,130: INFO: common json file saved at: scores.json]
+[2024-10-09 19:40:28,133: INFO: common json file saved at: scores.json]
+[2024-10-09 19:40:45,469: INFO: stage_04_model_evaluation >>>>> Stage Evaluation stage completed <<<<<
+
+x=========x]
+[2024-10-09 19:42:32,131: INFO: _internal [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.104:8080]
+[2024-10-09 19:42:32,131: INFO: _internal [33mPress CTRL+C to quit[0m]
+[2024-10-09 19:42:32,134: INFO: _internal  * Restarting with stat]
+[2024-10-09 19:42:37,253: WARNING: _internal  * Debugger is active!]
+[2024-10-09 19:42:37,253: INFO: _internal  * Debugger PIN: 154-082-343]
+[2024-10-09 19:42:38,780: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:42:38] "GET / HTTP/1.1" 200 -]
+[2024-10-09 19:42:39,532: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:42:39] "GET / HTTP/1.1" 200 -]
+[2024-10-09 19:42:39,693: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:42:39] "GET / HTTP/1.1" 200 -]
+[2024-10-09 19:42:39,832: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:42:39] "GET / HTTP/1.1" 200 -]
+[2024-10-09 19:42:40,002: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:42:40] "GET / HTTP/1.1" 200 -]
+[2024-10-09 19:42:47,588: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 19:42:48,530: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:42:48] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 19:42:58,906: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 19:42:59,523: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:42:59] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 19:44:21,580: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 19:44:22,127: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:44:22] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 19:44:23,927: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 19:44:24,489: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:44:24] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 19:44:30,139: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 19:44:30,453: WARNING: polymorphic_function 5 out of the last 9 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000028B05845580> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-10-09 19:44:30,659: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:44:30] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 19:44:35,817: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 19:44:36,159: WARNING: polymorphic_function 6 out of the last 11 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000028B058839C0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-10-09 19:44:36,374: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:44:36] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 19:44:42,375: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 19:44:42,908: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:44:42] "POST /predict HTTP/1.1" 200 -]
+[2024-10-09 19:44:48,997: WARNING: saving_utils Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-09 19:44:49,766: INFO: _internal 127.0.0.1 - - [09/Oct/2024 19:44:49] "POST /predict HTTP/1.1" 200 -]
