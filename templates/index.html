@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         body {
-            background-color: #eff2f9;
+            background-color: #f9efef;
             font-size: 16px;
             margin: 0;
             padding: 0;
@@ -102,6 +102,26 @@
                 font-size: 14px;
             }
         }
+		.result-box {
+			padding: 10px;
+			border-radius: 5px;
+			margin-top: 10px;
+		}
+
+		.result-normal {
+			background-color: #d4edda; /* Light green */
+			color: #155724; /* Dark green text */
+			padding: 10px;
+			text-align: center;
+		}
+
+		.result-tumor {
+			background-color: #f8d7da; /* Light red */
+			color: #721c24; /* Dark red text */
+			padding: 10px;
+			text-align: center;
+		}
+
     </style>
 </head>
 <body>
@@ -170,11 +190,23 @@
                 type: "post",
                 contentType: 'application/json',
                 data: JSON.stringify({image: base64Data}),
-                success: function(res){
-                    $(".res-part").html("<pre>" + JSON.stringify(res[0], undefined, 2) + "</pre>");
-                    $(".res-part2").html("<img class='resp-img' src='data:image/jpeg;base64," + res[1].image + "' alt='' style='max-width: 100%; height: auto;' />");
-                    $("#loading").hide();
-                },
+                success: function (res) {
+					// The response is now a simple string
+					const predictionResult = res; // Expecting "Normal" or "Tumor"
+					const resultBox = $(".jsonRes");
+
+					// Update the result box with the prediction result
+					resultBox.html("<pre>" + predictionResult + "</pre>");
+
+					// Check the prediction result and change the color accordingly
+					if (predictionResult === "Tumor") {
+						resultBox.removeClass("result-normal").addClass("result-tumor");
+					} else {
+						resultBox.removeClass("result-tumor").addClass("result-normal");
+					}
+
+					$("#loading").hide();
+				},
                 error: function() {
                     alert("Error occurred while processing your request.");
                     $("#loading").hide();
