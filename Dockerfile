@@ -1,7 +1,7 @@
 FROM python:3.12-alpine
 
 
-RUN apt update -y && apt install awscli -y
+RUN apk update -y && apt install awscli -y
 WORKDIR /app
 
 COPY . /app
