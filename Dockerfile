@@ -1,10 +1,16 @@
 FROM python:3.12-alpine
 
+# Update package index and install awscli
+RUN apk update && apk add --no-cache aws-cli
 
-RUN apk update -y && apk install awscli -y
+# Set the working directory
 WORKDIR /app
 
+# Copy the application files
 COPY . /app
-RUN pip install -r requirements.txt
 
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Command to run your application
 CMD ["python3", "app.py"]
