@@ -191,22 +191,21 @@
                 contentType: 'application/json',
                 data: JSON.stringify({image: base64Data}),
                 success: function (res) {
-					// The response is now a simple string
-					const predictionResult = res; // Expecting "Normal" or "Tumor"
-					const resultBox = $(".jsonRes");
+                    const predictionResult = res; // Expecting "Normal" or "Tumor"
+                    const resultBox = $(".jsonRes");
 
-					// Update the result box with the prediction result
-					resultBox.html("<pre>" + predictionResult + "</pre>");
+                    // Update the result box with the prediction result
+                    resultBox.html("<pre>" + predictionResult + "</pre>");
 
-					// Check the prediction result and change the color accordingly
-					if (predictionResult === "Tumor") {
-						resultBox.removeClass("result-normal").addClass("result-tumor");
-					} else {
-						resultBox.removeClass("result-tumor").addClass("result-normal");
-					}
+                    // Check the prediction result and change the color accordingly
+                    if (predictionResult === "Tumor") {
+                        resultBox.removeClass("result-normal").addClass("result-tumor");
+                    } else if (predictionResult === "Normal") {
+                        resultBox.removeClass("result-tumor").addClass("result-normal");
+                    }
 
-					$("#loading").hide();
-				},
+                    $("#loading").hide();
+                },
                 error: function() {
                     alert("Error occurred while processing your request.");
                     $("#loading").hide();

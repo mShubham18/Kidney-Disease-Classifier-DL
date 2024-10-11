@@ -42,10 +42,14 @@ def predictRoute():
     try:
         image = request.json["image"]
         decodeImage(image, clApp.filename)
-        result = clApp.classifier.predict()
-        return result
+        result = clApp.classifier.predict()  # This returns "Normal" or "Tumor"
+        
+        print("Prediction result:", result)  # Log the result for debugging
+        return result  # Return the plain string ("Normal" or "Tumor")
+        
     except Exception as e:
-        return jsonify({"error": str(e)})
+        return str(e), 500  # Return error message and HTTP 500 status
+
 
 if __name__ == "__main__":
     #app.run(host="0.0.0.0", port=8080, debug=True)  # for LOCALHOST
