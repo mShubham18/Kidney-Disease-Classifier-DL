@@ -191,7 +191,8 @@
                 contentType: 'application/json',
                 data: JSON.stringify({image: base64Data}),
                 success: function (res) {
-                    const predictionResult = res; // Expecting "Normal" or "Tumor"
+                    // Ensure the response is a plain string and not wrapped in an object
+                    const predictionResult = typeof res === 'string' ? res : JSON.stringify(res); // Convert to string if necessary
                     const resultBox = $(".jsonRes");
 
                     // Update the result box with the prediction result

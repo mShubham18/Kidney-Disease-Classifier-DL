@@ -42,10 +42,10 @@ def predictRoute():
     try:
         image = request.json["image"]
         decodeImage(image, clApp.filename)
-        result = clApp.classifier.predict()  # This returns "Normal" or "Tumor"
+        result = clApp.classifier.predict()  # This should return "Normal" or "Tumor"
         
-        print("Prediction result:", result)  # Log the result for debugging
-        return result  # Return the plain string ("Normal" or "Tumor")
+        # Return the plain string result, ensuring no object wrapping
+        return result  # Directly returning the string "Normal" or "Tumor"
         
     except Exception as e:
         return str(e), 500  # Return error message and HTTP 500 status
